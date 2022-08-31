@@ -64,7 +64,7 @@ resource "azurerm_sql_database" "db" {
   depends_on          = [azurerm_sql_server.mshack]
 }
 
-resource "azu7"fw01" {
+resource "azu7fw01" {
   count               = length(var.firewall_rules)
   name                = element(var.firewall_rules, count.index).name
   resource_group_name = var.resource_group_name
